@@ -13,11 +13,6 @@
         <br />
 
         <script>
-            var butt = document.getElementById('playButton');
-            butt.addEventListener('click', function(e) {
-                console.log("Button clicked");
-                togglePlay1();
-            });
             /**
              * If currently paused, invokes play, otherwise invokes paused.
              */
@@ -33,7 +28,7 @@
                 }
             }
         </script>
-        <button id="playButton">Play</button>
+        <input id="playButton" type="button" value="Play" onclick="togglePlay1();" />
 
         <script src="auth.js"></script>
         <script src="index.js"></script>
