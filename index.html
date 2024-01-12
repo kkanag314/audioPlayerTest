@@ -17,10 +17,11 @@
              * If currently paused, invokes play, otherwise invokes paused.
              */
             function togglePlay() {
-                var audio = document.querySelector('audio')
+                var audio = document.querySelector('audio');
+                alert(audio.paused);
                 if (audio.paused) {
                     console.log('user: play')
-                    audio.pause()
+                    //audio.pause()
                     void audio.play()
                 } else {
                     console.log('user: pause')
