@@ -1,0 +1,17 @@
+html,
+body {
+    background-color: #333333;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a,
+a:visited {
+    color: #5666d0;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #c156d0;
+}
