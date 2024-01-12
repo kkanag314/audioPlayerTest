@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Widevine Demo Player</title>
+        <meta name="description" content="A test bed for Widevine playback" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <audio controls style="width: 500px"></audio>
+        <pre id="logsContainer" style="width: 100%"></pre>
+        <br />
+
+        <script>
+            /**
+             * If currently paused, invokes play, otherwise invokes paused.
+             */
+            function togglePlay() {
+                var audio = document.querySelector('audio')
+                if (audio.paused) {
+                    console.log('user: play')
+                    audio.pause()
+                    void audio.play()
+                } else {
+                    console.log('user: pause')
+                    audio.pause()
+                }
+            }
+        </script>
+        <a href="javascript:togglePlay()">Play</a>
+
+        <script src="auth.js"></script>
+        <script src="index.js"></script>
+        <script src="drm.js"></script>
+        <script src="keyboardNav.js"></script>
+        <script>
+            load()
+        </script>
+    </body>
+</html>
