@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <audio controls style="width: 500px"></audio>
+        <audio controls="none" style="width: 500px"></audio>
         <pre id="logsContainer" style="width: 100%"></pre>
         <br />
 
@@ -21,7 +21,7 @@
                 console.log("audio's state " + audio.paused);
                 if (audio.paused) {
                     console.log('user: play')
-                    void audio.play()
+                    audio.play()
                 } else {
                     console.log('user: pause')
                     audio.pause()
