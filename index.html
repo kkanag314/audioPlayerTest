@@ -13,15 +13,19 @@
         <br />
 
         <script>
+            var button = document.getElementById('playButton');
+            button.addEventListener('click', function(e) {
+                console.log("Button clicked");
+                togglePlay();
+            });
             /**
              * If currently paused, invokes play, otherwise invokes paused.
              */
             function togglePlay() {
                 var audio = document.querySelector('audio');
-                alert(audio.paused);
+                console.log("audio's state " + audio.paused);
                 if (audio.paused) {
                     console.log('user: play')
-                    //audio.pause()
                     void audio.play()
                 } else {
                     console.log('user: pause')
@@ -29,7 +33,7 @@
                 }
             }
         </script>
-        <a href="javascript:togglePlay()">Play</a>
+        <button id="playButton">Play</button>
 
         <script src="auth.js"></script>
         <script src="index.js"></script>
