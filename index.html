@@ -13,15 +13,15 @@
         <br />
 
         <script>
-            var button = document.getElementById('playButton');
-            button.addEventListener('click', function(e) {
+            var butt = document.getElementById('playButton');
+            butt.addEventListener('click', function(e) {
                 console.log("Button clicked");
-                togglePlay();
+                togglePlay1();
             });
             /**
              * If currently paused, invokes play, otherwise invokes paused.
              */
-            function togglePlay() {
+            function togglePlay1() {
                 var audio = document.querySelector('audio');
                 console.log("audio's state " + audio.paused);
                 if (audio.paused) {
