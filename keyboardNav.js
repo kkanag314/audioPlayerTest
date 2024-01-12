@@ -13,6 +13,7 @@ function enableKeyboardNav() {
             e.code === 'Space'
         ) {
             if (document.activeElement) {
+                alert("Hi");
                 document.activeElement.dispatchEvent(new Event('click'))
             }
         }
